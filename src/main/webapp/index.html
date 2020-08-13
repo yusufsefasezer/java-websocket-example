@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Java WebSocket Example</title>
+
+    <!-- external style -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+    <!-- custom style -->
+    <style>
+        .chat-body {
+            height: 350px;
+            overflow-y: auto;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <div id="chat" class="mx-auto my-5 container">
+
+        <div class="card text-white bg-dark">
+
+            <!-- header -->
+            <div id="chatHeader" class="card-header clearfix">
+                <div class="float-left"><h1 class="h4 m-0">Java WebSocket Example</h1></div>
+                <div class="float-right"><span id="onlineStatus" class="d-none">4 user online</span></div>
+            </div>
+
+            <!-- input -->
+            <div id="chatForm" class="row mx-auto py-5 my-5">
+                <div class="col-md-8">
+                    <input id="inputUsername" type="text" class="form-control form-control-lg" autofocus="autofocus" placeholder="Enter username" />
+                </div>
+                <div class="col py-1">
+                    <button id="buttonLogin" type="button" class="btn btn-light btn-block btn-md mb-2">Login</button>
+                </div>
+            </div>
+
+            <!-- body -->
+            <div id="chatBody" class="card-body bg-white text-dark p-2 d-none chat-body">
+                <ul id="messageList" class="list-unstyled"></ul>
+            </div>
+
+            <!-- footer -->
+            <div id="chatFooter" class="card-footer row no-gutters p-3 d-none">
+                <div class="col-md-11">
+                    <textarea id="textareaMessage" class="form-control form-control-sm" rows="2"></textarea>
+                </div>
+                <div class="col pt-2 p-lg-2">
+                    <button id="buttonSend" class="btn btn-light btn-block btn-sm">SEND</button>
+                </div>
+            </div>
+            <span id="spanStatus" class="text-center mb-2"></span>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
