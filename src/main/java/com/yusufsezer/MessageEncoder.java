@@ -1,9 +1,9 @@
 package com.yusufsezer;
 
-import javax.json.bind.JsonbBuilder;
-import javax.websocket.EncodeException;
-import javax.websocket.Encoder;
-import javax.websocket.EndpointConfig;
+import jakarta.json.bind.JsonbBuilder;
+import jakarta.websocket.EncodeException;
+import jakarta.websocket.Encoder;
+import jakarta.websocket.EndpointConfig;
 
 public class MessageEncoder implements Encoder.Text<Message> {
 

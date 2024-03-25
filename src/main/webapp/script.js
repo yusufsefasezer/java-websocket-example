@@ -153,7 +153,7 @@ function onNewMessage(e) {
   var messageDate = new Date(e.detail.date);
   var messageElement = document.createElement('li');
   messageElement.textContent = e.detail.value;
-  var messageInfo = document.createElement('b');
+  var messageInfo = document.createElement('strong');
   messageInfo.textContent = '(' + messageDate.toLocaleTimeString() + ') ' + e.detail.username + ': ';
   messageElement.insertAdjacentElement('afterbegin', messageInfo);
   messageList.insertAdjacentElement('beforeend', messageElement);
